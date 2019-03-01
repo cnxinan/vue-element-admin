@@ -113,6 +113,26 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
+    path: '/bookings',
+    component: Layout,
+    redirect: '/bookings/recharge',
+    alwaysShow: true,
+    meta: {
+      title: 'bookings',
+      icon: 'money',
+      roles: ['admin']
+    },
+    children: [{
+      path: 'recharge',
+      component: () => import('@/views/bookings/recharges/index'),
+      name: 'Recharge',
+      meta: {
+        title: 'Recharge',
+        roles: ['admin']
+      }
+    }]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/index',
