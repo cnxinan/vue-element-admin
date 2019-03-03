@@ -113,6 +113,27 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
+    path: '/agent',
+    component: Layout,
+    alwaysShow: true,
+    meta: {
+      title: 'agent',
+      icon: 'people',
+      roles: ['admin']
+    },
+    children: [
+      {
+        path: 'page',
+        component: () => import('@/views/agent/baseinfo'),
+        name: 'baseinfo',
+        meta: {
+          title: 'baseinfo',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/index',
