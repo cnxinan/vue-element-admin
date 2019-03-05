@@ -50,6 +50,27 @@ const asyncRouterMap = [
     ]
   },
   {
+    path: '/game',
+    component: Layout,
+    alwaysShow: true,
+    meta: {
+      title: 'game',
+      icon: 'game',
+      roles: ['admin']
+    },
+    children: [
+      {
+        path: 'signInGame',
+        component: () => import('@/views/game/signinGame'),
+        name: 'SigninGameSetting',
+        meta: {
+          title: 'signinGameSetting',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/index',
