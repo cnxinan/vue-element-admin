@@ -95,8 +95,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: '1111111'
+        username: 'cnxinan@qq.com',
+        password: 'chen1984'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -136,6 +136,7 @@ export default {
           this.loading = true
           this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
             this.loading = false
+            debugger
             this.$router.push({ path: this.redirect || '/' })
           }).catch(() => {
             this.loading = false
