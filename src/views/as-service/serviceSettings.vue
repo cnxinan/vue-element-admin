@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'Services'
+  name: 'ServiceSettings'
 }
 </script>

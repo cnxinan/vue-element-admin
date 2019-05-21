@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'BookingList'
+  name: 'WholesalerList'
 }
 </script>

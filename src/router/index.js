@@ -11,7 +11,8 @@ import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import nestedRouter from './modules/nested'
-import asBookingsRouter from './modules/asBookings'
+import asBookingRouter from './modules/asBooking'
+import asAgentRouter from './modules/asAgent'
 
 /** note: sub-menu only appear when children.length>=1
  *  detail see  https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -87,7 +88,7 @@ export const constantRouterMap = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', affix: true }
+        meta: { title: 'documentation', icon: 'documentation' }
       }
     ]
   },
@@ -113,7 +114,8 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
-  asBookingsRouter,
+  asBookingRouter,
+  asAgentRouter,
   {
     path: '/permission',
     component: Layout,

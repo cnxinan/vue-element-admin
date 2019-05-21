@@ -3,37 +3,37 @@
 import Layout from '@/views/layout/Layout'
 
 const asBookingRouter = {
-  path: '/bookings',
+  path: '/booking',
   component: Layout,
   alwaysShow: true,
   meta: {
-    title: 'bookings',
+    title: 'booking',
     icon: 'money',
     roles: ['admin']
   },
   children: [
     {
-      path: 'ProductList',
+      path: 'product-list',
       component: () => import('@/views/as-booking/products'),
-      name: 'BookingList',
+      name: 'product-list',
       meta: {
         title: 'productList',
         roles: ['']
       }
     },
     {
-      path: 'ShoppingCart',
+      path: 'shopping-cart',
       component: () => import('@/views/as-booking/shoppingCart'),
-      name: 'ShoppingCart',
+      name: 'shopping-cart',
       meta: {
         title: 'shoppingCart',
         roles: ['']
       }
     },
     {
-      path: 'BookingList',
+      path: 'booking-list',
       component: () => import('@/views/as-booking/bookings'),
-      name: 'BookingList',
+      name: 'booking-list',
       meta: {
         title: 'bookingList',
         roles: ['']

@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'Services'
+  name: 'BrandList'
 }
 </script>
