@@ -11,6 +11,7 @@ import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import nestedRouter from './modules/nested'
+import asBookingsRouter from './modules/asBookings'
 
 /** note: sub-menu only appear when children.length>=1
  *  detail see  https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -112,26 +113,7 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
-  {
-    path: '/bookings',
-    component: Layout,
-    redirect: '/bookings/recharge',
-    alwaysShow: true,
-    meta: {
-      title: 'bookings',
-      icon: 'money',
-      roles: ['admin']
-    },
-    children: [{
-      path: 'recharge',
-      component: () => import('@/views/bookings/recharges/index'),
-      name: 'Recharge',
-      meta: {
-        title: 'Recharge',
-        roles: ['admin']
-      }
-    }]
-  },
+  asBookingsRouter,
   {
     path: '/permission',
     component: Layout,
